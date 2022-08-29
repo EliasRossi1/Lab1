@@ -1,0 +1,44 @@
+@model Lab1.Models.Alumnos
+@{
+    ViewData["Title"] = "Calculadora";
+}
+<h2>@ViewData["Title"]</h2>
+<div class="row">
+<div class="col-md-4">
+<form asp-action="Alumno" asp-controller="Alumnos" >
+    
+     <div class="form-group">
+        <label asp-for="nombre"> Nombre Alumno </label>
+        <input asp-for="nombre" class="form-control" />
+    </div>
+       
+       <label asp-for="Curso"> Curso a elegir: </label>
+        
+       <div class="form-check mb-3">
+
+                            <input class="form-check-input" asp-type="checkbox" name="HISTORIA"asp-for="Curso" value="HISTORIA" id="flexCheckDefault"/>
+                                    HISTORIA
+                        
+        </div>
+
+        <div class="form-check mb-3">
+                <label asp-for="Curso" class="form-label">
+                            <input class="form-check-input" asp-type="checkbox" name="MATEMATICA" asp-for="Curso" value="MATEMATICA" id="flexCheckDefault"/>
+                                    MATEMATICA
+                        </label>
+        </div>
+        <div class="form-check mb-3">
+                <label asp-for="Curso" class="form-label">
+                            <input class="form-check-input"  asp-type="checkbox" asp-for="Curso" value="LENGUAJE" id="flexCheckDefault"/>
+                                    LENGUAJE
+                        </label>
+        </div>
+
+
+    <div class="form-group">
+        <input type="submit" value="Alumno" class="btn btn-primary" />
+    </div>
+</form>
+</div>
+</div>
+<h3>@ViewData["Message"]</h3>
